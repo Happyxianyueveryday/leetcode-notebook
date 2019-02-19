@@ -53,7 +53,7 @@
   
   
   ## 4. 代码实现
-  C++代码实现请参见19. Remove Nth Node From End of List，python代码实现请参见19. Remove Nth Node From End of List.py。
+  C++代码实现请参见19. Remove Nth Node From End of List.cpp，python代码实现请参见19. Remove Nth Node From End of List.py。
 
   ## 5. 复杂度分析
   假设链表的长度（结点数目为m）；快指针首先移动n步，时间消耗为n；然后快慢指针同时移动直到快指针到最后一个结点，时间消耗为m-1-n；两者相加即为m-1，因此时间复杂度为O(m)。由于只用了固定个数的游标指针和临时指针，因此空间复杂度为O(1)。
