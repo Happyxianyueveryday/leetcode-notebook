@@ -27,7 +27,7 @@
  
   败者树在胜者树上做了较小的修改，是胜者树的一种变体。在败者树中，用父结点记录其左右子结点进行比赛的败者，而让胜者参加下一轮的比赛。败者树的根结点记录的是败者，需要加一个结点来记录整个比赛的胜利者。下图为一个简单的败者树示例。
   
-  ![avatar](https://raw.githubusercontent.com/Happyxianyueveryday/Leetcode-Notebook/master/Linked%20List/23.%20Merge%20k%20Sorted%20Lists/1350310705_4079.jpg)
+  ![avatar](https://images0.cnblogs.com/blog/510104/201306/18092743-8710d85589da4018aabda95a1ec0ad65.jpg)
   
   #### A. 败者树的调整
   与胜者树相同，每当一个叶子结点的值改变时，败者树都需要进行一次**调整**，**调整**的基本算法如下所示。
