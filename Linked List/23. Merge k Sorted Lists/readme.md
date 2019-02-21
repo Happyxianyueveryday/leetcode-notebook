@@ -83,11 +83,11 @@
   > 2. 初始化一个含有k个数值的数组lis，其中lis\[i]为指针pos\[i]所指向的链表结点的值。
   > 3. 根据上述初始化完成的数组pos和lis，建立一个含有2\*k个元素胜者树tree（建立过程见上面的胜者树建立方法部分）；并同时建立一个等长度的胜者树结点下标数组nodeindex，其中nodeindex\[i]是败者树结点tree\[i]的值在lis中的对应下标m。
   > 4. 迭代执行下面的步骤a——步骤e，直到指针数组pos中的每一个指针均指向空结点NULL为止。
-  >> a. 取出胜者树tree的根节点的值tree\[1]，将该值加入归并结果链表res中。
-  >> b. 更新游标指针pos\[nodeindex[1]]：即pos\[nodeindex\[1]]=pos\[nodeindex\[1]].next，因为nodeindex\[1]为根节点的值所来自的待归并链表的下标。
-  >> c. 更新胜者树的叶子结点为新的值：即tree\[k+nodeindex\[1]]=(pos\[nodeindex\[1]]==NULL)?pos\[nodeindex\[1]].val:INT_MAX。
-  >> d. 更新数组lis中对应元素的值：即lis\[nodeindex\[i]]=(pos\[nodeindex\[1]]==NULL)?pos\[nodeindex\[1]].val:INT_MAX。
-  >> e. 重新调整胜者树（调整过程见上面的胜者树建立方法部分）。
+  >> a. 取出胜者树tree的根节点的值tree\[1]，将该值加入归并结果链表res中。  
+  >> b. 更新游标指针pos\[nodeindex[1]]：即pos\[nodeindex\[1]]=pos\[nodeindex\[1]].next，因为nodeindex\[1]为根节点的值所来自的待归并链表的下标。  
+  >> c. 更新胜者树的叶子结点为新的值：即tree\[k+nodeindex\[1]]=(pos\[nodeindex\[1]]==NULL)?pos\[nodeindex\[1]].val:INT_MAX。  
+  >> d. 更新数组lis中对应元素的值：即lis\[nodeindex\[i]]=(pos\[nodeindex\[1]]==NULL)?pos\[nodeindex\[1]].val:INT_MAX。  
+  >> e. 重新调整胜者树（调整过程见上面的胜者树建立方法部分）。  
   > 5. 返回归并结果链表res。  
   
   ## 3. 易错的边缘情况
