@@ -15,11 +15,11 @@
   ![avatar](https://github.com/Happyxianyueveryday/Leetcode-Notebook/blob/master/Linked%20List/2.%20Add%20Two%20Numbers/QQ%E5%9B%BE%E7%89%8720190222211515.jpg)
   
   用文字重述，如下所示。
-  > 1. 使用两个游标指针pos1和pos2，指向链表1和链表2的头结点，初始化进位值为0。
+  > 1. 使用两个游标指针pos1和pos2，指向链表1和链表2的头结点，初始化进位值carrier为0。
   > 2. 若游标指针pos1为NULL，则第一个加数为0，否则为pos1.val；若游标指针pos2为NULL，则第二个加数为0，否则为pos2.val。
-  > 3. 将第一个加数和第二个加数，以及进位值相加得到和；该和整除以10得到新的进位值，模10则得到得到当前位上的加法结果，并将和值模10的结果加入结果链表中。
+  > 3. 将第一个加数和第二个加数，以及进位值相加得到和；该和整除以10得到新的进位值carrier，模10则得到得到当前位上的加法结果，并将和值模10的结果加入结果链表中。
   > 4. 若游标指针pos1为NULL，则保持pos1不变，否则更新pos1=pos1->next；若游标指针pos2为NULL，则保持pos2不变，否则更新pos2=pos2->next。
-  > 5. 循环进行上述的步骤2到4，直到pos1==NULL，pos2==NULL，且进位值为0为止。
+  > 5. 循环进行上述的步骤2到4，直到pos1==NULL，pos2==NULL，且进位值carrier为0为止。
   
   
   
