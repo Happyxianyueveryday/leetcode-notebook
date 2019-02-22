@@ -9,7 +9,7 @@
   题目分析：  
   要删除一个链表的某个结点，只需要找到该待删除结点的前驱结点，然后即可通过前驱结点删除该结点。本题要删除链表的倒数第n个结点，因此需要查找链表的倒数第n+1个结点，找到该前驱结点后，即可删除目标结点。 
   
-  ## 1. 基本解题思想
+  ## 1. 解题算法
   使用快慢双指针法。  
   
   ![avatar](https://raw.githubusercontent.com/Happyxianyueveryday/Leetcode-Notebook/master/Linked%20List/19.%20Remove%20Nth%20Node%20From%20End%20of%20List/QQ%E6%88%AA%E5%9B%BE20190222215358.png)
