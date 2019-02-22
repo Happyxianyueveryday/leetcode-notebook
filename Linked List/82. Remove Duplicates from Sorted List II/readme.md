@@ -1,6 +1,6 @@
 # 82. Remove Duplicates from Sorted List II
 
-# 1. 基本算法思想
+## 1. 基本算法思想
 由于按照题目要求，需要删除掉所有出现重复的值的结点，因此可能需要删除头结点，我们需要使用哑结点作为头结点。并且需要保存所使用的游标指针的前驱结点，具体算法步骤简述如下。
 
 > 1. 向原始链表的头结点之前插入一个哑结点，记新的头结点为head。
@@ -10,16 +10,16 @@
 >> b. pos和pos.next的值若相等，则说明pos后存在与pos相等的重复结点；这时首先查找pos后第一个与pos不相等的结点now（也有可能该结点不存在，now=NULL)，然后连接lastpos和now，即lastpos.next=now，并删除中间的结点；最后更新指针：lastpos保持不变，pos=now。
 > 4. 返回处理后的链表头结点head.next。
 
-# 2. 伪代码实现
+## 2. 伪代码实现
 
 
-# 3. 代码实现
+## 3. 代码实现
 C++实现代码请参见82. Remove Duplicates from Sorted List II.cpp，python实现代码请参见82. Remove Duplicates from Sorted List II.py。
 
 
-# 4. 易错的边缘情况
+## 4. 易错的边缘情况
 
 
-# 5. 算法复杂度分析
+## 5. 算法复杂度分析
 
 
