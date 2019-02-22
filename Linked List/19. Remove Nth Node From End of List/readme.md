@@ -2,14 +2,21 @@
 
   本题的任务虽然是删除链表的倒数第n个结点，实际上代表着一类题型，即如何访问链表的倒数第n个结点的问题。
   
+  ## 0. 原题及题目分析
+  原题：  
+  ![avatar](https://raw.githubusercontent.com/Happyxianyueveryday/Leetcode-Notebook/master/Linked%20List/19.%20Remove%20Nth%20Node%20From%20End%20of%20List/QQ%E6%88%AA%E5%9B%BE20190222212440.png)
+  
+  题目分析：  
+  要删除一个链表的某个结点，只需要找到该待删除结点的前驱结点，然后即可通过前驱结点删除该结点。本题要删除链表的倒数第n个结点，因此需要查找链表的倒数第n+1个结点，找到该前驱结点后，即可删除目标结点。 
+  
   ## 1. 基本解题思想
   使用快慢双指针法。
+  
+  ![avatar](https://raw.githubusercontent.com/Happyxianyueveryday/Leetcode-Notebook/master/Linked%20List/19.%20Remove%20Nth%20Node%20From%20End%20of%20List/QQ%E6%88%AA%E5%9B%BE20190222215358.png)
   
   > 1. 第一步，创建两个指针，即指向链表头结点的快指针fast，以及慢指针slow
   > 2. 第二步，快指针fast向前移动n步，慢指针保持不动
   > 3. 第三步，若第二步完成后的快指针fast==NULL，这时说明链表总共有n个结点（因为fast移动了n步），待删除的结点就是头结点，这时特殊处理，删除头结点；若fast!=NULL，这时同时移动快指针fast和慢指针slow，直到fast->next==NULL时停止，这时的慢指针slow就指向待删除结点的前驱结点，通过该前驱结点删除待删除结点即可。
-  
-  附注：需要特别注意，删除倒数第n个结点实际上需要查找的是倒数第n+1个结点，也就是待删除结点的前驱结点，通过查找前驱结点，便能够对待删除结点进行快速的删除。
   
   
   ## 2. 伪代码实现
