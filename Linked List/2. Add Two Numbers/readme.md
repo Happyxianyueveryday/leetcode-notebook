@@ -9,7 +9,7 @@
   题目分析：  
   使用链表完成竖式相加的过程，因为给出的两个作为加数的链表以及要求返回的结果的位均为倒序放置，因此直接使用两个游标指针遍历两个链表，将对应的位之间对应相加即可。
   
-  ## 1. 基本解题思想
+  ## 1. 解题算法
   本题的解法的基本思想如下图所示。
   
   ![avatar](https://github.com/Happyxianyueveryday/Leetcode-Notebook/blob/master/Linked%20List/2.%20Add%20Two%20Numbers/QQ%E5%9B%BE%E7%89%8720190222211515.jpg)
