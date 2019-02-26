@@ -2,7 +2,8 @@
  
  ## 1. 原题和题目分析
  原题：
- ![avatar] (https://raw.githubusercontent.com/Happyxianyueveryday/Leetcode-Notebook/master/Linked%20List/109.%20Convert%20Sorted%20List%20to%20Binary%20Search%20Tree/QQ%E6%88%AA%E5%9B%BE20190226232849.png)
+ 
+ ![avatar](https://raw.githubusercontent.com/Happyxianyueveryday/Leetcode-Notebook/master/Linked%20List/109.%20Convert%20Sorted%20List%20to%20Binary%20Search%20Tree/QQ%E6%88%AA%E5%9B%BE20190226232849.png)
  
  本题在树的tag下同样会遇到，将有序链表转化为高度平衡的二叉树的算法是固定的，推荐熟练地记忆下此算法，使用如下的递归方法进行转换：
  > 1. 使用快慢双指针法查找输入链表的中间结点，并将中间结点作为该树的根结点。
