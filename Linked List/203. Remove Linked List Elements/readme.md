@@ -3,6 +3,8 @@
 ## 1. 原题及题目解析
 原题：
 
+![avatar](https://github.com/Happyxianyueveryday/Leetcode-Notebook/blob/master/Linked%20List/203.%20Remove%20Linked%20List%20Elements/QQ%E6%88%AA%E5%9B%BE20190227090122.png)
+
 题目解析：
 较为基础的题目，考察链表结点最基本的删除操作。由于可能需要删除头结点，因此此处推荐使用哑结点技巧简化代码。具体算法流程如下。
 > 0. 向链表增加一个头部哑结点，并更新head指向该哑结点。
