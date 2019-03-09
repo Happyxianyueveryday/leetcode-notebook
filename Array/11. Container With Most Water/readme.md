@@ -13,9 +13,11 @@
 ## 2. 算法简述
 > 1. 创建两个游标指针pos1和pos2；pos1指向数组的首元素，即初始化pos1=0；pos2指向数组的末元素，即初始化pos2=size-1；创建最大盛水量记录变量res=0。
 > 2. 当pos1<pos2时，循环进行以下操作：  
->> 2.1. 计算由pos2和pos1指向元素所围成的容器的盛水量tempres，tempres=min(height\[pos1],height\[pos2])\*(pos2-pos1)。
->> 2.2. 若上述计算得到的盛水量大于记录变量res，则更新res: res=tempres。
->> 2.3 
+>> 2.1. 计算由pos2和pos1指向元素所围成的容器的盛水量tempres，tempres=min(height\[pos1],height\[pos2])\*(pos2-pos1)。  
+>> 2.2. 若上述计算得到的盛水量大于记录变量res，则更新res: res=tempres。  
+>> 2.3. 若height\[pos1]<=height\[pos2]，则向右移动pos1直到第一个大于height\[pos1]的元素为止，将pos1更新为该元素的下标。  
+>> 2.4. 若height\[pos1]>height\[pos2]，则向左移动pos2直到第一个大于height\[pos2]的元素为止，将pos2更新为该元素的下标。  
+> 3. 退出循环时，res就是最大的盛水量，故直接返回res。  
 
 ## 3. 双指针移动规则的详细解析
 
