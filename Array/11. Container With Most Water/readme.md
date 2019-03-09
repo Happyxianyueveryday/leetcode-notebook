@@ -20,7 +20,17 @@
 > 3. 退出循环时，res就是最大的盛水量，故直接返回res。  
 
 ## 3. 双指针移动规则的详细解析
+下面简单解释一下为什么移动双指针时，按照如上的移动规则来进行移动。  
+假设指针pos1右侧存在新指针newpos1，指针pos2左侧存在新指针newpos2，则有如下的三种情况：
++ 1. pos1右侧元素小于等于pos1，pos2左侧元素小于等于pos2，即height\[newpos1]<=height\[pos1], height\[newpos2]<=height\[pos2]。这时由newpos1和newpos2围成的容器的盛水量必定小于由pos1和pos2围成的容器的盛水量，故无需进行计算。
 
+![avatar](https://github.com/Happyxianyueveryday/Leetcode-Notebook/blob/master/Array/11.%20Container%20With%20Most%20Water/QQ%E6%88%AA%E5%9B%BE20190309120759.png)
+
++ 2. pos1右侧元素大于pos1，pos2左侧元素大于pos2，即height\[newpos1]<=height\[pos1], height\[newpos2]<=height\[pos2]。这时由newpos1和newpos2围成的容器的盛水量不一定小于由pos1和pos2围成的容器的盛水量，故需要进行计算以进一步确认。
+
+![avatar](https://github.com/Happyxianyueveryday/Leetcode-Notebook/blob/master/Array/11.%20Container%20With%20Most%20Water/QQ%E6%88%AA%E5%9B%BE20190309120825.png)
+
++ 3. 若height\[newpos1]和height\[newpos2]中
 
 ## 4. 实现代码
 
