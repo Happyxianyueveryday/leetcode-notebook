@@ -36,7 +36,7 @@
 
 + 5. 上述的情况1到情况4可以总结为：若满足height\[newpos1]<min(height\[pos1], height\[pos2])，或者满足height\[newpos2]<min(height\[pos1], height\[pos2])，则由newpos1和newpos2指向的数组元素组成的容器的盛水量必定小于由pos1和pos2指向的数组元素组成的容器的盛水量，可以无需计算。
 
-![avatar] (https://github.com/Happyxianyueveryday/Leetcode-Notebook/blob/master/Array/11.%20Container%20With%20Most%20Water/QQ%E6%88%AA%E5%9B%BE20190309120825.png)
+![avatar](https://github.com/Happyxianyueveryday/Leetcode-Notebook/blob/master/Array/11.%20Container%20With%20Most%20Water/QQ%E6%88%AA%E5%9B%BE20190309120825.png)
 
 + 6. 根据第五点的总结，因此对于指针pos1和pos2，每次移动这两个指针时，若pos1<pos2，则将指针pos1右移直到第一个大于height\[pos1]的位置即可；若pos2<pos1，则将指针pos2左移直到第一个大于height\[pos2]的位置即可。
 
