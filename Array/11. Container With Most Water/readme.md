@@ -30,9 +30,19 @@
 
 ![avatar](https://github.com/Happyxianyueveryday/Leetcode-Notebook/blob/master/Array/11.%20Container%20With%20Most%20Water/QQ%E6%88%AA%E5%9B%BE20190309120825.png)
 
-+ 3. 若height\[newpos1]和height\[newpos2]中
++ 3. pos1右侧的元素大于pos1，pos2左侧的元素小于pos2，即height\[newpos1]>height\[pos1]，且height\[newpos2]<height\[pos2]，这时若pos2<pos1，则无需进行计算，这两个元素组成的容器的盛水量必然小于pos1和pos2组成的盛水量，其他情况均不可确定，因此需要继续计算来验证。  
+
++ 4. pos1右侧的元素小于pos1，且在pos2左侧的元素大于pos2，即height\[newpos1]<height\[pos1]，且height\[newpos2]>height\[pos2]，这时若pos1<pos2，则无需进行计算，这两个元素组成的容器的盛水量必然小于pos1和pos2组成的盛水量，其他情况均不可确定，因此需要继续计算来验证。  
+
++ 5. 上述的情况1到情况4可以总结为：若满足height\[newpos1]<min(height\[pos1], height\[pos2])，或者满足height\[newpos2]<min(height\[pos1], height\[pos2])，则由newpos1和newpos2指向的数组元素组成的容器的盛水量必定小于由pos1和pos2指向的数组元素组成的容器的盛水量，可以无需计算。
+
+![avatar] (https://github.com/Happyxianyueveryday/Leetcode-Notebook/blob/master/Array/11.%20Container%20With%20Most%20Water/QQ%E6%88%AA%E5%9B%BE20190309120825.png)
+
++ 6. 根据第五点的总结，因此对于指针pos1和pos2，每次移动这两个指针时，若pos1<pos2，则将指针pos1右移直到第一个大于height\[pos1]的位置即可；若pos2<pos1，则将指针pos2左移直到第一个大于height\[pos2]的位置即可。
+
 
 ## 4. 实现代码
-
+C++实现代码请参见文件11. Container With Most Water.cpp，python实现文件请参见文件11. Container With Most Water.py。
 
 ## 5. 复杂度分析
+不难分析得到，本算法的时间复杂度为O(n)，空间复杂度为O(1)。
